@@ -12,7 +12,5 @@ install:
 script:
   - vendor/bin/phpunit --coverage-clover=coverage.xml
   - vendor/bin/php-cs-fixer fix --dry-run
-  - vendor/bin/phpstan analyze -l 3 src
-  - vendor/bin/phpstan analyze tests
 after_success:
   - bash <(curl -s https://codecov.io/bash)
