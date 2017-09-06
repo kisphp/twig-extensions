@@ -2,7 +2,7 @@
 
 namespace tests\Twig\Helpers;
 
-use Kisphp\Twig\Extensions\AbstractTwigFunction;
+use Kisphp\Twig\AbstractTwigFunction;
 use Kisphp\Twig\IsSafeHtml;
 
 class DemoFunction extends AbstractTwigFunction

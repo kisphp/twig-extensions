@@ -1,16 +1,16 @@
 <?php
 
-namespace Kisphp\Twig\Extensions;
+namespace Kisphp\Twig;
 
-use Kisphp\Twig\ExtensionTrait;
+use \Twig_Filter as TwigExtension;
 
-abstract class AbstractTwigFunction
+abstract class AbstractTwigFilter
 {
     use ExtensionTrait;
 
     public function __construct()
     {
-        $this->extension = new \Twig_SimpleFunction(
+        $this->extension = new TwigExtension(
             $this->getExtensionName(),
             $this->getExtensionCallback(),
             $this->getExtensionOptions()

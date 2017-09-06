@@ -2,7 +2,7 @@
 
 namespace tests\Twig\Helpers;
 
-use Kisphp\Twig\Extensions\AbstractTwigFilter;
+use Kisphp\Twig\AbstractTwigFilter;
 use Kisphp\Twig\IsSafeHtml;
 
 class DemoFilter extends AbstractTwigFilter
