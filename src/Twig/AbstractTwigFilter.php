@@ -1,8 +1,6 @@
 <?php
 
-namespace Kisphp\Twig\Extensions;
-
-use Kisphp\Twig\ExtensionTrait;
+namespace Kisphp\Twig;
 
 abstract class AbstractTwigFilter
 {
