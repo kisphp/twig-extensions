@@ -2,7 +2,7 @@
 
 namespace Kisphp\Twig;
 
-use \Twig_SimpleFunction as BaseExtension;
+use Twig_SimpleFunction as BaseExtension;
 
 abstract class AbstractTwigFunction
 {
