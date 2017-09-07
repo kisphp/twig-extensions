@@ -7,7 +7,7 @@ trait IsSafeHtml
     /**
      * @return array
      */
-    protected function getOptions()
+    protected function getExtensionOptions()
     {
         return [
             'is_safe' => ['html'],
