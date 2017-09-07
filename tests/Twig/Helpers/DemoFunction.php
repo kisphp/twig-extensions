@@ -9,12 +9,12 @@ class DemoFunction extends AbstractTwigFunction
 {
     use IsSafeHtml;
 
-    protected function getFunctionName()
+    protected function getExtensionName()
     {
         return 'demo';
     }
 
-    protected function getFunction()
+    protected function getExtensionCallback()
     {
         return function ($name) {
             return $name;

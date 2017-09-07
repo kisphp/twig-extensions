@@ -9,12 +9,12 @@ class DemoFilter extends AbstractTwigFilter
 {
     use IsSafeHtml;
 
-    protected function getFilterName()
+    protected function getExtensionName()
     {
         return 'demo';
     }
 
-    protected function getFilter()
+    protected function getExtensionCallback()
     {
         return function ($name) {
             return $name;
