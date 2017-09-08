@@ -12,6 +12,6 @@ i:
 
 t:
 	$(PHPUNIT)
-#	$(PHPCS) fix -v
+	$(PHPCS) fix -v --dry-run
 #	$(PHP) vendor/bin/phpstan analyze -l 3 src
 #	$(PHP) vendor/bin/phpstan analyze -l 1 tests
