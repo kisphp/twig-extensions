@@ -3,7 +3,6 @@
 namespace tests\Twig;
 
 use PHPUnit\Framework\TestCase;
-use tests\Twig\Helpers\DemoFunction;
 use tests\Twig\Helpers\DemoFunctionSafeHtml;
 
 class FunctionSafeHtmlTest extends TestCase
