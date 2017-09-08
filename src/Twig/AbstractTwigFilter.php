@@ -2,55 +2,18 @@
 
 namespace Kisphp\Twig;
 
+use Twig_Filter as TwigExtension;
+
 abstract class AbstractTwigFilter
 {
-    /**
-     * @var \Twig_Filter
-     */
-    private $twigFilter;
-
-    /**
-     * @return \Twig_Filter
-     */
-    public function getTwigFilter()
-    {
-        return $this->twigFilter;
-    }
+    use ExtensionTrait;
 
     public function __construct()
     {
-        $this->twigFilter = new \Twig_Filter(
-            $this->getFilterName(),
-            $this->getFilter(),
-            $this->getOptions()
+        $this->extension = new TwigExtension(
+            $this->getExtensionName(),
+            $this->getExtensionCallback(),
+            $this->getExtensionOptions()
         );
-    }
-
-    /**
-     * @return \Twig_Filter
-     */
-    public static function create()
-    {
-        $filter = new static();
-
-        return $filter->getTwigFilter();
-    }
-
-    /**
-     * @return string
-     */
-    abstract protected function getFilterName();
-
-    /**
-     * @return Callable
-     */
-    abstract protected function getFilter();
-
-    /**
-     * @return array
-     */
-    protected function getOptions()
-    {
-        return [];
     }
 }

@@ -3,20 +3,20 @@
 namespace tests\Twig;
 
 use PHPUnit\Framework\TestCase;
-use tests\Twig\Helpers\DemoFunction;
+use tests\Twig\Helpers\DemoFunctionSafeHtml;
 
-class FunctionTest extends TestCase
+class FunctionSafeHtmlTest extends TestCase
 {
     public function testFunctionName()
     {
-        $func = DemoFunction::create();
+        $func = DemoFunctionSafeHtml::create();
 
         self::assertSame('demo', $func->getName());
     }
 
     public function testCallable()
     {
-        $func = DemoFunction::create();
+        $func = DemoFunctionSafeHtml::create();
         $callable = $func->getCallable();
 
         self::assertSame('name', $callable('name'));
@@ -24,8 +24,8 @@ class FunctionTest extends TestCase
 
     public function testOptions()
     {
-        $func = new DemoFunction();
+        $func = new DemoFunctionSafeHtml();
 
-        self::assertEmpty($func->getProvidedOptions());
+        self::assertNotEmpty($func->getProvidedOptions());
     }
 }
