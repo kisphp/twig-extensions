@@ -3,17 +3,20 @@
 namespace tests\Twig\Helpers;
 
 use Kisphp\Twig\AbstractTwigFilter;
-use Kisphp\Twig\IsSafeHtml;
 
 class DemoFilter extends AbstractTwigFilter
 {
-    use IsSafeHtml;
-
+    /**
+     * @return string
+     */
     protected function getExtensionName()
     {
         return 'demo';
     }
 
+    /**
+     * @return \Closure
+     */
     protected function getExtensionCallback()
     {
         return function ($name) {
