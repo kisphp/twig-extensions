@@ -9,6 +9,11 @@ class DemoFunctionSafeHtml extends AbstractTwigFunction
 {
     use IsSafeHtml;
 
+    public function getProvidedOptions()
+    {
+        return $this->getExtensionOptions();
+    }
+
     protected function getExtensionName()
     {
         return 'demo';
@@ -19,10 +24,5 @@ class DemoFunctionSafeHtml extends AbstractTwigFunction
         return function ($name) {
             return $name;
         };
-    }
-
-    public function getProvidedOptions()
-    {
-        return $this->getExtensionOptions();
     }
 }

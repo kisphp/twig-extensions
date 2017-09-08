@@ -6,6 +6,11 @@ use Kisphp\Twig\AbstractTwigFunction;
 
 class DemoFunction extends AbstractTwigFunction
 {
+    public function getProvidedOptions()
+    {
+        return $this->getExtensionOptions();
+    }
+
     protected function getExtensionName()
     {
         return 'demo';
@@ -16,10 +21,5 @@ class DemoFunction extends AbstractTwigFunction
         return function ($name) {
             return $name;
         };
-    }
-
-    public function getProvidedOptions()
-    {
-        return $this->getExtensionOptions();
     }
 }

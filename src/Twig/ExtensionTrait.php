@@ -33,7 +33,7 @@ trait ExtensionTrait
     abstract protected function getExtensionName();
 
     /**
-     * @return Callable
+     * @return callable
      */
     abstract protected function getExtensionCallback();
 
