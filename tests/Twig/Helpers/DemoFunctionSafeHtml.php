@@ -3,9 +3,12 @@
 namespace tests\Twig\Helpers;
 
 use Kisphp\Twig\AbstractTwigFunction;
+use Kisphp\Twig\IsSafeHtml;
 
-class DemoFunction extends AbstractTwigFunction
+class DemoFunctionSafeHtml extends AbstractTwigFunction
 {
+    use IsSafeHtml;
+
     protected function getExtensionName()
     {
         return 'demo';
