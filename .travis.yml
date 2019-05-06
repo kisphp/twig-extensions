@@ -15,4 +15,5 @@ script:
   - vendor/bin/phpstan analyze -l 3 src
   - vendor/bin/phpstan analyze tests
 #after_success:
+#  - vendor/bin/codacycoverage clover coverage.xml
 #  - bash <(curl -s https://codecov.io/bash)
