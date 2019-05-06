@@ -2,7 +2,7 @@
 
 namespace Kisphp\Twig;
 
-use \Twig_Function as TwigExtension;
+use Twig\TwigFunction as TwigExtension;
 
 abstract class AbstractTwigFunction
 {

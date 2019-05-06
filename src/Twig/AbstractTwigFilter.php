@@ -2,7 +2,7 @@
 
 namespace Kisphp\Twig;
 
-use \Twig_Filter as TwigExtension;
+use Twig\TwigFilter as TwigExtension;
 
 abstract class AbstractTwigFilter
 {

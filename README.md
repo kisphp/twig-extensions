@@ -1,7 +1,7 @@
 # Kisphp Twig Extensions
 
 [![Build Status](https://travis-ci.org/kisphp/twig-extensions.svg?branch=master)](https://travis-ci.org/kisphp/twig-extensions)
-[![codecov](https://codecov.io/gh/kisphp/twig-extensions/branch/master/graph/badge.svg)](https://codecov.io/gh/kisphp/twig-extensions)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/918d91ce791d4213b57f6429e33eb477)](https://www.codacy.com/app/mariusbogdan83/twig-extensions?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kisphp/twig-extensions&amp;utm_campaign=Badge_Grade)
 
 ## Installation
 

@@ -3,14 +3,17 @@ dist: trusty
 php:
   - 7.0.8
   - 7.1
+  - 7.2
+  - 7.3
 before_script:
   - travis_retry composer self-update
 install:
-  - COMPOSER_ALLOW_XDEBUG=0 composer install --prefer-dist --no-interaction
+  - COMPOSER_ALLOW_XDEBUG=0 composer install --prefer-dist --no-interaction --no-ansi
 script:
   - vendor/bin/phpunit --coverage-clover=coverage.xml
-  - vendor/bin/php-cs-fixer fix --dry-run
+#  - vendor/bin/php-cs-fixer fix --dry-run
   - vendor/bin/phpstan analyze -l 3 src
   - vendor/bin/phpstan analyze tests
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
+#after_success:
+#  - vendor/bin/codacycoverage clover coverage.xml
+#  - bash <(curl -s https://codecov.io/bash)
