@@ -2,15 +2,18 @@
 
 namespace Kisphp\Twig;
 
+use Twig\TwigFunction;
+use Twig\TwigFilter;
+
 trait ExtensionTrait
 {
     /**
-     * @var \Twig_SimpleFunction
+     * @var TwigFunction|TwigFilter
      */
     protected $extension;
 
     /**
-     * @return \Twig_SimpleFunction
+     * @return TwigFilter|TwigFunction|\Twig_SimpleFunction
      */
     public function getExtension()
     {
@@ -18,7 +21,7 @@ trait ExtensionTrait
     }
 
     /**
-     * @return \Twig_SimpleFunction
+     * @return TwigFilter|TwigFunction|\Twig_SimpleFunction
      */
     public static function create()
     {

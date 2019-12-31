@@ -83,8 +83,9 @@ namespace AppBundle\Twig;
 
 use AppBundle\Twig\Functions\DemoFunction;
 use AppBundle\Twig\Filters\DemoFilter;
+use Twig\Extension\AbstractExtension;
 
-class TwigExtension extends \Twig_Extension
+class TwigExtension extends AbstractExtension
 {
     public function getFunctions()
     {
@@ -107,6 +108,8 @@ If your function of filter has dependencies then you can instantiate them like t
 ```php
 public function getFunctions()
 {
+    $myCustomDependency = 'object, variable, array or what ever you need here';
+
     return [
         (new DemoFunction($myCustomDependency))->getExtension(),
     ];
